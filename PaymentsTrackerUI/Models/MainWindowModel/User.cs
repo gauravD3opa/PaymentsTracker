@@ -10,10 +10,14 @@ namespace PaymentsTrackerUI.Models.MainWindowModel
     {
         private string name;
 
+        private bool isSelected;
+
+        private string email;
+
         public string Name { get => name; set => name = value; }
 
+        public bool IsSelected { get => isSelected; set => isSelected = value; }
         
-        private string email;
         public string Email { get => email; set => email=value; }
 
     }

@@ -11,7 +11,7 @@ namespace PaymentsTrackerUI.Models.MainWindowModel
     { 
         public ObservableCollection<User> GetAllUsers()
         {
-            return new ObservableCollection<User>() { new User { Email = "gaurav.deopa4@gmail.com", Name = "Gaurav Deopa" }, new User { Email = "gaurav.deopa24@gmail.com", Name = "Gaurav Deopa2" } };
+            return new ObservableCollection<User>() { new User { Email = "gaurav.deopa4@gmail.com", Name = "Gaurav Deopa", IsSelected=false}, new User { Email = "gaurav.deopa24@gmail.com", Name = "Gaurav Deopa2", IsSelected = true } };
 
         }
     }
