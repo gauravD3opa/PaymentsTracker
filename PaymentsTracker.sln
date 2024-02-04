@@ -5,9 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentsTrackerUI", "PaymentsTrackerUI", "{B5FA8768-5434-48CE-8F30-4335C5E33A8C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentsTrackerService", "PaymentsTrackerService", "{1A93DBCF-5DD4-4907-B00F-36766E1681DA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentsTrackerUI", "PaymentsTrackerUI\PaymentsTrackerUI.csproj", "{F5AD5786-A966-40EF-990B-734B7ADF8CFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentsTrackerUI", "PaymentsTrackerUI\PaymentsTrackerUI.csproj", "{F5AD5786-A966-40EF-990B-734B7ADF8CFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
