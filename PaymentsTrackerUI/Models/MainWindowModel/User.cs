@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace PaymentsTrackerUI.Models.MainWindowModel
 {
-    internal class MainWindowModel
-    {
-        public List<User> usersList = new List<User>();
-
-    }
-
-    internal class User
+    public class User
     {
         private string name;
 
-        string Name { get => name; set => name = value; }
+        public string Name { get => name; set => name = value; }
+
+        
+        private string email;
+        public string Email { get => email; set => email=value; }
 
     }
 }

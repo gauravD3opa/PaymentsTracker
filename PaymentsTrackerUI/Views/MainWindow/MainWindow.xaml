@@ -10,18 +10,13 @@
 
 
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="53,45,0,0" TextWrapping="Wrap" Text="Enter Amount" VerticalAlignment="Top" Width="120" Height="25"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="53,90,0,0" VerticalAlignment="Top" Height="12" Width="120"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="53,120,0,0" VerticalAlignment="Top" Height="13" Width="120"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="53,153,0,0" VerticalAlignment="Top" Height="12" Width="120"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="53,186,0,0" VerticalAlignment="Top" Height="12" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="252,50,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="319,50,0,0" VerticalAlignment="Top"/>
-        <Label Content="Add New Split Payment" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" Width="140" HorizontalContentAlignment="Left"/>
-
-        <Grid x:Name="mainGrid">
-            <!-- Checkboxes will be added dynamically here -->
-        </Grid>
-
+        <ListView Name="UsersList" ItemsSource="{Binding Users}" BorderBrush="AliceBlue" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
+                </GridView>
+            </ListView.View>
+        </ListView >
     </Grid>
 </Window>

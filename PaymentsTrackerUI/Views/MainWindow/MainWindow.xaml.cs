@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PaymentsTrackerUI.ViewModels.MainWindowViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace PaymentsTrackerUI
         public MainWindow()
         {
             InitializeComponent();
+            MainWindowViewModel mainViewModel = new MainWindowViewModel();
+            this.DataContext = mainViewModel;
         }
 
     }
