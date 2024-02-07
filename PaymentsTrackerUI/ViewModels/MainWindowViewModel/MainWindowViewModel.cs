@@ -12,13 +12,21 @@ namespace PaymentsTrackerUI.ViewModels.MainWindowViewModel
 {
     public class MainWindowViewModel
     {
+
+        private PaymentsTrackerServiceClient wcfServiceClient;
         public ObservableCollection<User> Users { get; set; }
 
-        private UserManager _UserManager;
         public MainWindowViewModel()
         {
-            this._UserManager=new UserManager();
-            this.Users= this._UserManager.GetAllUsers();
+            wcfServiceClient=new PaymentsTrackerServiceClient();
+            this.Users= GetAllUsers();
+        }
+
+        public static ObservableCollection<User> GetAllUsers()
+        {
+            //call service
+            return new ObservableCollection<User>() { new User { Email = "gaurav.deopa4@gmail.com", Name = "Gaurav Deopa", IsSelected = false }, new User { Email = "gaurav.deopa24@gmail.com", Name = "Gaurav Deopa2", IsSelected = true } };
+
         }
     }
 }
