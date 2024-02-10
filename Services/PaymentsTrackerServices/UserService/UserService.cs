@@ -5,11 +5,13 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
-namespace PamymentsTrackerServices.UserService
+namespace PaymentsTrackerServices.UserService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "UserService" in both code and config file together.
+    [ServiceContract]
     public class UserService : IUserService
     {
+        [OperationContract]
         public void DoWork()
         {
         }
