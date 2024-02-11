@@ -13,5 +13,10 @@ namespace PaymentTrackerServices.UserService
         public void DoWork()
         {
         }
+
+        public bool IsAlive()
+        {
+            return true;    
+        }
     }
 }

@@ -13,5 +13,8 @@ namespace PaymentTrackerServices.UserService
     {
         [OperationContract]
         void DoWork();
+
+        [OperationContract]
+        bool IsAlive();
     }
 }
