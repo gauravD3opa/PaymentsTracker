@@ -12,6 +12,8 @@ namespace PaymentTrackerServices.UserService
     {
         public void DoWork()
         {
+            DataAccessLayer dt=new DataAccessLayer();
+            dt.ExecuteGetAllUsersProcedure();
         }
 
         public bool IsAlive()
