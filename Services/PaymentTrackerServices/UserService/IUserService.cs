@@ -16,5 +16,8 @@ namespace PaymentTrackerServices.UserService
 
         [OperationContract]
         bool IsAlive();
+
+        [OperationContract]
+         List<User> GetAllUsers();
     }
 }

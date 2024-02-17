@@ -40,6 +40,7 @@
     <Compile Include="DataAccessLayer.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="UserService\IUserService.cs" />
+    <Compile Include="UserService\User.cs" />
     <Compile Include="UserService\UserService.cs" />
   </ItemGroup>
   <ItemGroup>

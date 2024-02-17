@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PaymentsTrackerUI.Models.MainWindowModel
 {
-    public class User
+    public class UserModel
     {
         private string name;
 

@@ -7,27 +7,37 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using UserService;
+using static UserService.UserServiceClient;
 
 namespace PaymentsTrackerUI.ViewModels.MainWindowViewModel
 {
     public class MainWindowViewModel
     {
 
-        private PaymentsTrackerServiceClient wcfServiceClient;
-        public ObservableCollection<User> Users { get; set; }
+        public ObservableCollection<UserModel> Users { get; set; }
 
         public MainWindowViewModel()
         {
-            wcfServiceClient=new PaymentsTrackerServiceClient();
             this.Users= GetAllUsers();
         }
 
-        public static ObservableCollection<User> GetAllUsers()
+        public static ObservableCollection<UserModel> GetAllUsers()
         {
-            //call service
-            
-            return new ObservableCollection<User>() { new User { Email = "gaurav.deopa4@gmail.com", Name = "Gaurav Deopa", IsSelected = false }, new User { Email = "gaurav.deopa24@gmail.com", Name = "Gaurav Deopa2", IsSelected = true } };
 
+            List<UserService.User> userList = new List<UserService.User>();
+            UserServiceClient userServiceClient = new UserServiceClient(EndpointConfiguration.BasicHttpBinding_IUserService);
+            userList = userServiceClient.GetAllUsers();
+            List<UserModel> userModlList = new List<UserModel>();
+            foreach(User user in userList)
+            {
+                UserModel userModl = new UserModel();
+                userModl.Name=user.Name;
+                userModl.Email=user.Email;
+                userModlList.Add(userModl);
+            }
+            ObservableCollection<UserModel> users = new ObservableCollection<UserModel>(userModlList);
+            return users;
         }
     }
 }
